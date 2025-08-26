@@ -1,7 +1,7 @@
 import Button from '../Button'
 import Tag from '../Tag'
 import * as S from './styles'
-
+import StarIcon from '../../assets/icons/StarIcons.svg'
 type Props = {
   imagem: string
   titulo: string
@@ -12,7 +12,7 @@ type Props = {
   id: number
 }
 
-import StarIcon from '../../assets/icons/StarIcons.svg'
+
 
 const Lojas = ({
   imagem,
