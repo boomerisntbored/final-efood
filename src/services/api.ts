@@ -38,13 +38,6 @@ const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://ebac-fake-api.vercel.app/api/efood/checkout'
   }),
-  endpoints: (builder) => ({
-    getRestaurantes: builder.query<RestauranteDetalhado[], void>({
-      query: () => 'restaurantes'
-    }),
-    getPerfil: builder.query<RestauranteDetalhado, string>({
-      query: (id) => `restaurantes/${id}`
-    }),
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
         url: 'checkout',
