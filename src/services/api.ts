@@ -35,21 +35,25 @@ type PurchaseResponse = {
 }
 
 const api = createApi({
+  reducerPath: 'api', 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood/checkout'
+    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood' 
   }),
+  endpoints: (builder) => ({
+    
+    
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
-        url: 'checkout',
+        url: 'checkout', 
         method: 'POST',
         body
       })
-   })
-)},
+    })
+  })
+})
 
 export const {
-  useGetRestaurantesQuery,
-  useGetPerfilQuery,
+
   usePurchaseMutation
 } = api
 
