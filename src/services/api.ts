@@ -45,7 +45,7 @@ const api = createApi({
         body
       })
    })
-)} 
+)},
 
 export const {
   useGetRestaurantesQuery,
