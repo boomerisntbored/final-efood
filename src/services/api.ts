@@ -37,7 +37,7 @@ type PurchaseResponse = {
 const api = createApi({
   reducerPath: 'api', 
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood' 
+    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood/checkout' 
   }),
   endpoints: (builder) => ({
     
